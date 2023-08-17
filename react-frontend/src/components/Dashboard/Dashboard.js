@@ -27,24 +27,6 @@ const Dashboard = (props) => {
                     <p>You are ready to go!</p>
                 </div>
             </div>
-            <div className="card w-10 my-6">
-                <h4>REST API Ready</h4>
-                <p className="underline m-0">e.g. Authentication</p>
-                <p>POST http://localhost:3030/authentication {`{ "email": "example@email.com",    "password": "123456" }`}</p>
-                <p className="underline m-0">e.g. CRUD</p>
-                <p className="m-0">
-                    GET {`=>`} GET http://localhost:3030/users/{`<userId>`}
-                </p>
-                <p className="m-0">
-                    CREATE {`=>`} POST http://localhost:3030/users` {`{ "email": "example2@email.com",    "password": "456789" }`}
-                </p>
-                <p className="m-0">
-                    PATCH {`=>`} PATCH http://localhost:3030/users/{`<userId>`}` {`{ "name": "Thomas Smith" }`}
-                </p>
-                <p className="m-0">
-                    DELETE {`=>`} DELETE http://localhost:3030/users/{`<userId>`}
-                </p>
-            </div>
         </div>
     );
 };
