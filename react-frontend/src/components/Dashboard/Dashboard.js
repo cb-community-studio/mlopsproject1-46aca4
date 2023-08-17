@@ -16,6 +16,7 @@ const Dashboard = (props) => {
                         <></>
                 <div className='col-12 lg:col-6 xl:col-4'><Link to='/users'><div className='card mb-0 flex flex-column align-items-center justify-content-center hover zoom' style={{ height: '10rem' }}><div className='text-900 font-medium text-lg'>Users</div></div></Link></div>
                 <div className='col-12 lg:col-6 xl:col-4'><Link to='/modelitems'><div className='card mb-0 flex flex-column align-items-center justify-content-center hover zoom' style={{ height: '10rem' }}><div className='text-900 font-medium text-lg'>Modelitems</div></div></Link></div>
+                <div className='col-12 lg:col-6 xl:col-4'><Link to='/mlopsview'><div className='card mb-0 flex flex-column align-items-center justify-content-center hover zoom' style={{ height: '10rem' }}><div className='text-900 font-medium text-lg'>Mlops</div></div></Link></div>
                         {/* ~cb-add-services-card~ */}
                     </div>
                 </div>

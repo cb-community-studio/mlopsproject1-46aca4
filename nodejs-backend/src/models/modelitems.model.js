@@ -7,17 +7,23 @@
         const schema = new Schema(
           // ~cb-read-start~
           {
-       modelName: { type: String },
-       accuracy: { type: String },
-       auc: { type: String },
-       recall: { type: String },
-       prec: { type: String },
-       f1Score: { type: String },
-       kappa: { type: String },
-       mcc: { type: String },
-       TTvalue: { type: String },
-
-    }
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "_id": { "type": "object", "properties": { "$oid": { "type": "string" } } },
+                "Model": { "type": "object" },
+                "Accuracy": { "type": "object" },
+                "AUC": { "type": "object" },
+                "Recall": { "type": "object" },
+                "Prec.": { "type": "object" },
+                "F1": { "type": "object" },
+                "Kappa": { "type": "object" },
+                "MCC": { "type": "object" },
+                "TT (Sec)": { "type": "object" }
+              }
+            }
+          }
           // ~cb-read-end~
           , 
           {

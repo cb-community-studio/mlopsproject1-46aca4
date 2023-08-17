@@ -22,7 +22,7 @@ const ModelitemsDataTable = ({ items, onEditRow, onRowDelete, onRowClick }) => {
     const deleteTemplate = (rowData, { rowIndex }) => <Button onClick={() => onRowDelete(rowIndex)} icon="pi pi-times" className="p-button-rounded p-button-danger p-button-text" />;
     
     return (
-        <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
+        <DataTable value={items} stripedRows tableStyle={{ minWidth: '100rem' }} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
             <Column field="modelName" header="Model " body={pTemplate0} style={{ minWidth: "8rem" }} />
             <Column field="accuracy" header="Accuracy" body={pTemplate1} style={{ minWidth: "8rem" }} />
             <Column field="auc" header="AUC Score" body={pTemplate2} style={{ minWidth: "8rem" }} />
