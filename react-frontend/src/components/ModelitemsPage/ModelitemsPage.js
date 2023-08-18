@@ -25,7 +25,7 @@ const ModelitemsPage = (props) => {
         //on mount
         client
             .service("modelitems")
-            .find({ query: { $limit: 100 } })
+            .find({ query: { } })
             .then((res) => {
                 setData(res.data);
             })
