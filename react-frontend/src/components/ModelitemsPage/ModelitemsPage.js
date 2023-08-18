@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import client from "../../services/restClient";
 import _ from "lodash";
-import { Button } from "primereact/button";
 import { SplitButton } from "primereact/splitbutton";
 import AreYouSureDialog from "../common/AreYouSureDialog";
 import ModelitemsDatatable from "./ModelitemsDataTable";

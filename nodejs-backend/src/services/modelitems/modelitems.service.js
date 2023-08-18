@@ -2,6 +2,7 @@ const { Modelitems } = require('./modelitems.class');
 const createModel = require('../../models/modelitems.model');
 const hooks = require('./modelitems.hooks');
 
+
 module.exports = function (app) {
   const options = {
     Model: createModel(app),
@@ -13,6 +14,14 @@ module.exports = function (app) {
 
   // Get our initialized service so that we can register hooks
   const service = app.service('modelitems');
+
+  service.find()
+  .then(data => {
+    console.log('All data:', data)
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
 
   service.hooks(hooks);
 };
