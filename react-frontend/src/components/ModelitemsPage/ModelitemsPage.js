@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
 import client from "../../services/restClient";
 import _ from "lodash";
 import { SplitButton } from "primereact/splitbutton";
@@ -12,8 +11,8 @@ import ModelitemsFakerDialogComponent from "./ModelitemsFakerDialogComponent";
 import ModelitemsSeederDialogComponent from "./ModelitemsSeederDialogComponent";
 import ModelDropDown from "./ModelDropDown";
 
+
 const ModelitemsPage = (props) => {
-    const history = useHistory();
     const [data, setData] = useState([]);
     const [showAreYouSureDialog, setShowAreYouSureDialog] = useState(false);
     const [showEditDialog, setShowEditDialog] = useState(false);
@@ -21,12 +20,15 @@ const ModelitemsPage = (props) => {
     const [showFakerDialog, setShowFakerDialog] = useState(false);
     const [showSeederDialog, setShowSeederDialog] = useState(false);
     const [selectedEntityIndex, setSelectedEntityIndex] = useState();
+    const itemId = "64dc72297ed83d1b9bc49266";
+    
     useEffect(() => {
         //on mount
         client
             .service("modelitems")
-            .find({ query: { } })
+            .find({ query : { "_id" : itemId}})
             .then((res) => {
+                console.log(res.data)
                 setData(res.data);
             })
             .catch((error) => {
@@ -65,7 +67,7 @@ const ModelitemsPage = (props) => {
             setShowAreYouSureDialog(false)
         } catch (error) {
             console.log({ error });
-            props.alert({ title: "Modelitems", type: "error", message: error.message || "Failed delete record" });
+            props.alert({ title: "modelitems", type: "error", message: error.message || "Failed delete record" });
         }
     };
     const onRowDelete = (index) => {

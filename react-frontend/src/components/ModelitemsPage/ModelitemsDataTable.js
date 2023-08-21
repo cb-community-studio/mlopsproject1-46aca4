@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { Button } from 'primereact/button';
 
 
-const ModelitemsDataTable = ({ items, onEditRow, onRowDelete, onRowClick }) => {
+const ModelitemsDataTable = ({items, onEditRow, onRowDelete, onRowClick }) => {
     
     const pTemplate0 = (rowData, { rowIndex }) => <p >{rowData.modelName}</p>
     const pTemplate1 = (rowData, { rowIndex }) => <p >{rowData.accuracy}</p>
@@ -22,19 +22,20 @@ const ModelitemsDataTable = ({ items, onEditRow, onRowDelete, onRowClick }) => {
     const deleteTemplate = (rowData, { rowIndex }) => <Button onClick={() => onRowDelete(rowIndex)} icon="pi pi-times" className="p-button-rounded p-button-danger p-button-text" />;
     
     return (
-        <DataTable value={items} stripedRows tableStyle={{ minWidth: '100rem' }} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
-            <Column field="modelName" header="Model " body={pTemplate0} style={{ minWidth: "8rem" }} />
-            <Column field="accuracy" header="Accuracy" body={pTemplate1} style={{ minWidth: "8rem" }} />
-            <Column field="auc" header="AUC Score" body={pTemplate2} style={{ minWidth: "8rem" }} />
-            <Column field="recall" header="Recall" body={pTemplate3} style={{ minWidth: "8rem" }} />
-            <Column field="prec" header="Precision" body={pTemplate4} style={{ minWidth: "8rem" }} />
-            <Column field="f1Score" header="F1" body={pTemplate5} style={{ minWidth: "8rem" }} />
-            <Column field="kappa" header="Kappa" body={pTemplate6} style={{ minWidth: "8rem" }} />
-            <Column field="mcc" header="MCC" body={pTemplate7} style={{ minWidth: "8rem" }} />
-            <Column field="TTvalue" header="TT (Sec)" body={pTemplate8} style={{ minWidth: "8rem" }} />
-
+        <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
+            <Column field="modelName" header="Model " body={pTemplate0} style={{ minWidth: "10rem" }} />
+            <Column field="accuracy" header="Accuracy" body={pTemplate1} style={{ minWidth: "10rem" }} />
+            <Column field="auc" header="AUC Score" body={pTemplate2} style={{ minWidth: "10rem" }} />
+            <Column field="recall" header="Recall" body={pTemplate3} style={{ minWidth: "10rem" }} />
+            <Column field="prec" header="Precision" body={pTemplate4} style={{ minWidth: "10rem" }} />
+            <Column field="f1Score" header="F1" body={pTemplate5} style={{ minWidth: "10rem" }} />
+            <Column field="kappa" header="Kappa" body={pTemplate6} style={{ minWidth: "10rem" }} />
+            <Column field="mcc" header="MCC" body={pTemplate7} style={{ minWidth: "10rem" }} />
+            <Column field="TTvalue" header="TT (Sec)" body={pTemplate8} style={{ minWidth: "10rem" }} />
+        
             <Column header="Edit" body={editTemplate} />
             <Column header="Delete" body={deleteTemplate} />
+        
         </DataTable>
     );
 };

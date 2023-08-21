@@ -16,7 +16,7 @@ const UsersDataTable = ({ items, onEditRow, onRowDelete, onRowClick }) => {
     
     return (
         <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
-            <Column field="name" header="Email" body={pTemplate0} sortable style={{ minWidth: "8rem" }} />
+            <Column field="name" header="Name" body={pTemplate0} sortable style={{ minWidth: "8rem" }} />
             <Column field="email" header="Email" body={pTemplate1} sortable style={{ minWidth: "8rem" }} />
 
             <Column header="Edit" body={editTemplate} />

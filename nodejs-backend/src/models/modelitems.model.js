@@ -6,24 +6,17 @@
         const { Schema } = mongooseClient;
         const schema = new Schema(
           // ~cb-read-start~
-          {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "_id": { "type": "object", "properties": { "$oid": { "type": "string" } } },
-                "Model": { "type": "object" },
-                "Accuracy": { "type": "object" },
-                "AUC": { "type": "object" },
-                "Recall": { "type": "object" },
-                "Prec.": { "type": "object" },
-                "F1": { "type": "object" },
-                "Kappa": { "type": "object" },
-                "MCC": { "type": "object" },
-                "TT (Sec)": { "type": "object" }
-              }
+          { 
+                modelName: { "type": "object" },
+                accuracy: { "type": "object" },
+                auc: { "type": "object" },
+                recall: { "type": "object" },
+                prec: { "type": "object" },
+                f1Score: { "type": "object" },
+                kappa: { "type": "object" },
+                mcc: { "type": "object" },
+                TTvalue: { "type": "object" }
             }
-          }
           // ~cb-read-end~
           , 
           {
