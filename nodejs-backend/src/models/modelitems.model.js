@@ -7,15 +7,15 @@
         const schema = new Schema(
           // ~cb-read-start~
           { 
-                modelName: { "type": "object" },
-                accuracy: { "type": "object" },
-                auc: { "type": "object" },
-                recall: { "type": "object" },
-                prec: { "type": "object" },
-                f1Score: { "type": "object" },
-                kappa: { "type": "object" },
-                mcc: { "type": "object" },
-                TTvalue: { "type": "object" }
+                Model: { type: String },
+                Accuracy: { type: String },
+                Auc: { type: String },
+                Recall: { type: String },
+                Prec: { type: String },
+                F1: { type: String },
+                Kappa: { type: String },
+                MCC: { type: String },
+                TTsec : { type: Object }
             }
           // ~cb-read-end~
           , 

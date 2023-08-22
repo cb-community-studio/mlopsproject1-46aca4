@@ -34,7 +34,8 @@ import LoadingWrapper from "./wrappers/LoadingWrapper";
 import UsersPage from "../components/UsersPage/UsersPage";
 import ModelitemsPage from "../components/ModelitemsPage/ModelitemsPage";
 import MlopsViews from "../components/Mlops/MlopsView";
-import DataExplore from "../components/Mlops/DataExpl"
+import DataExplore from "../components/Mlops/DataExpl";
+
 // ~cb-add-import~
 
 const MyRouter = () => {
@@ -179,7 +180,6 @@ const MyRouter = () => {
                 <Switch>
                     <Route path="/" exact render={() => <Dashboard colorMode={layoutColorMode} location={location} />} />
                     <Route path="/dashboard" exact render={() => <Dashboard colorMode={layoutColorMode} location={location} />} />
-                    {/*<Route path="/mlopsview" exact render={() => <MlopsViews colorMode={layoutColorMode} location={location} />} /> */}
                     <Route path="/login" component={LoginPage} />
                     <Route path="/signup" exact component={SignUpPage} />
                     <Route path="/account" component={Account} />

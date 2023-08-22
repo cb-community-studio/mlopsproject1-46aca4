@@ -10,6 +10,8 @@ import ModelitemsCreateDialogComponent from "./ModelitemsCreateDialogComponent";
 import ModelitemsFakerDialogComponent from "./ModelitemsFakerDialogComponent";
 import ModelitemsSeederDialogComponent from "./ModelitemsSeederDialogComponent";
 import ModelDropDown from "./ModelDropDown";
+import { Button } from 'primereact/button';
+
 
 
 const ModelitemsPage = (props) => {
@@ -20,15 +22,14 @@ const ModelitemsPage = (props) => {
     const [showFakerDialog, setShowFakerDialog] = useState(false);
     const [showSeederDialog, setShowSeederDialog] = useState(false);
     const [selectedEntityIndex, setSelectedEntityIndex] = useState();
-    const itemId = "64dc72297ed83d1b9bc49266";
     
     useEffect(() => {
         //on mount
         client
             .service("modelitems")
-            .find({ query : { "_id" : itemId}})
+            .find({ query: { $limit: 100 } })
             .then((res) => {
-                console.log(res.data)
+                console.log(res.data);
                 setData(res.data);
             })
             .catch((error) => {
@@ -99,7 +100,10 @@ const ModelitemsPage = (props) => {
             <div className="col-10">
                 <div className="col flex justify-content-end">
                     <ModelDropDown/>
-                    <SplitButton model={menuItems} dropdownIcon="pi pi-ellipsis-v" buttonClassName="hidden" menuButtonClassName="ml-1 p-button-text"></SplitButton>
+                    <div className="flex justify-content-center">
+                        <Button label="Proceed To FE"  />
+                    </div>
+                    <SplitButton model={menuItems} dropdownIcon="pi pi-ellipsis-v" buttonClassName="hidden" menuButtonClassName="ml-2 p-button-text"></SplitButton>
                 </div>
             </div>
             <div className="grid col-10">

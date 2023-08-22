@@ -2,6 +2,31 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { Button } from 'primereact/button';
+import { Carousel } from 'primereact/carousel';
+
+const CarouselComponent = () => {
+    const images = [
+        { source: 'https://tse1.mm.bing.net/th?id=OIP.nKp--ILXaUwIwF9QRhhXpgHaC0&pid=Api&P=0&h=180', alt: 'Image 1' },
+        { source: 'https://tse1.mm.bing.net/th?id=OIP.nKp--ILXaUwIwF9QRhhXpgHaC0&pid=Api&P=0&h=180', alt: 'Image 2' },
+        { source: 'https://tse3.mm.bing.net/th?id=OIP.lX4vKiBvUYV5XwB6FqpsRQHaEK&pid=Api&P=0&h=180', alt: 'Image 3' },
+    ];
+  
+    const itemTemplate = (item) => {
+      return (
+        <div>
+          <img src={item.source} alt={item.alt} />
+        </div>
+      );
+    };
+ 
+    return (
+      <div className="col-12 m-0 align-items-center carousel-demo">
+        <Carousel value={images} className="custom-carousel" circular
+            autoplayInterval={3000} itemTemplate={itemTemplate} />
+      </div>
+    );
+
+};
 
 const MlopsView = (props) => {
     const history = useHistory();
@@ -10,6 +35,7 @@ const MlopsView = (props) => {
     return (
         <div className="col-12 flex flex-column align-items-center">
             <div className="card w-12">
+            <CarouselComponent />
                 <div className="card w-auto">
                 <div className="surface-0 text-center">
                     <div className="mb-3 font-bold text-3xl">
@@ -39,6 +65,7 @@ const MlopsView = (props) => {
                     </div>
                 </div>
                 </div>
+                <CarouselComponent />
             </div>
         </div>
     );

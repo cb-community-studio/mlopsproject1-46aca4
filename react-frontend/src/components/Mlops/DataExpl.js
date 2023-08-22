@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { TabView, TabPanel } from 'primereact/tabview';
 import ModelitemsPage from "../ModelitemsPage/ModelitemsPage";
+import DataCard from "../ModelitemsPage/DataCard";
 
 const DataExplore = () => {
     
@@ -9,13 +10,19 @@ const DataExplore = () => {
   return (
       <div className="card w-12 ">
           <TabView>
-              <TabPanel header="Table View">
+              <TabPanel header="Interpretation of the Dataset">
                 <ModelitemsPage />
               </TabPanel>
-              <TabPanel header="FE">
+              <TabPanel header="Feature Eng.">
+                <DataCard/>
               </TabPanel>
-              <TabPanel header="Comprison">
+              <TabPanel header="Model Comparison">
+                <DataCard/>
                 
+              </TabPanel>
+              <TabPanel header="Model Re-Training">
+                <DataCard/>
+
               </TabPanel>
           </TabView>
       </div>

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { Dropdown } from 'primereact/dropdown';
+import { Model, model } from "mongoose";
 
 const ModelDropDown = () => {
+
     const [selectedCity, setSelectedCity] = useState(null);
-    const cities = [
-        { name: 'X1', code: 'NY' },
-        { name: 'X2', code: 'RM' },
-        { name: 'X3', code: 'LDN' },
-        { name: 'X4', code: 'IST' },
-        { name: 'X5', code: 'PRS' }
-    ];
+    const cities = [Model];
 
     return (
         <div className="col-10 flex justify-content-end">
