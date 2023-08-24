@@ -3,9 +3,6 @@ import { connect } from "react-redux";
 import { TabView, TabPanel } from 'primereact/tabview';
 import ModelitemsPage from "../ModelitemsPage/ModelitemsPage";
 import DataCard from "../ModelitemsPage/DataCard";
-import FeatureEng from "./FeatureEng";
-import { FileUpload } from 'primereact/fileupload';
-
 
 const DataExplore = () => {
     
