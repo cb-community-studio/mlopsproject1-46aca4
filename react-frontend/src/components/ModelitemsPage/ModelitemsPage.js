@@ -9,9 +9,9 @@ import ModelitemsEditDialogComponent from "./ModelitemsEditDialogComponent";
 import ModelitemsCreateDialogComponent from "./ModelitemsCreateDialogComponent";
 import ModelitemsFakerDialogComponent from "./ModelitemsFakerDialogComponent";
 import ModelitemsSeederDialogComponent from "./ModelitemsSeederDialogComponent";
-import ModelDropDown from "./ModelDropDown";
 import { Button } from 'primereact/button';
-
+import { Dropdown } from 'primereact/dropdown';
+import ModelDropdown from "./ModelDropDown";
 
 
 const ModelitemsPage = (props) => {
@@ -22,7 +22,8 @@ const ModelitemsPage = (props) => {
     const [showFakerDialog, setShowFakerDialog] = useState(false);
     const [showSeederDialog, setShowSeederDialog] = useState(false);
     const [selectedEntityIndex, setSelectedEntityIndex] = useState();
-    
+    const [selectedColumnName, setSelectedColumnName] = useState(""); // State for selected column name
+
     useEffect(() => {
         //on mount
         client
@@ -76,7 +77,7 @@ const ModelitemsPage = (props) => {
         setShowAreYouSureDialog(true);
     };
 
-    const onRowClick = (e) => {};
+    const onRowClick = (e) => { };
 
     const menuItems = [
         {
@@ -99,9 +100,13 @@ const ModelitemsPage = (props) => {
         <div className="col-12 flex flex-column align-items-center">
             <div className="col-10">
                 <div className="col flex justify-content-end">
-                    <ModelDropDown/>
+                    <ModelDropdown
+                        data={data} // Pass the data prop
+                        selectedColumnName={selectedColumnName}
+                        onChange={setSelectedColumnName}
+                    />
                     <div className="flex justify-content-center">
-                        <Button label="Proceed To FE"  />
+                        <Button label="Proceed To FE" />
                     </div>
                     <SplitButton model={menuItems} dropdownIcon="pi pi-ellipsis-v" buttonClassName="hidden" menuButtonClassName="ml-2 p-button-text"></SplitButton>
                 </div>

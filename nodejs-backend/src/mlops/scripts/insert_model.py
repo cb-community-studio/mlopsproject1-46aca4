@@ -11,8 +11,6 @@ my_collection = db[collection_name].find({})
 classifiers = ['et', 'lr', 'ridge', 'lda', 'xgboost', 'qda', 'nb', 'rf', 'lightgbm', 'gbc', 'ada', 'knn', 'dt', 'dummy', 'svm']
 columns = []
 
-
-
 def Merge(dict1, dict2):
     res = {**dict1, **dict2}
     return res

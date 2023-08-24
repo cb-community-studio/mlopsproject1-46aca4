@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dropdown } from 'primereact/dropdown';
-import { Model, model } from "mongoose";
 
-const ModelDropDown = () => {
-
-    const [selectedCity, setSelectedCity] = useState(null);
-    const cities = [Model];
+const ModelDropdown = ({ data, selectedColumnName, onChange }) => {
+    const getRemainingColumnNames = () => {
+        const columnNames = data.length > 0 ? Object.keys(data[0]) : [];
+        return columnNames.slice(1);
+    };
 
     return (
-        <div className="col-10 flex justify-content-end">
-            <span className="p-float-label">
-                <Dropdown inputId="dd-city" value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" className="w-full md:w-14rem" />
-                <label htmlFor="dd-city">Target Variable</label>
-            </span>
-        </div>
+        <Dropdown
+            value={selectedColumnName}
+            options={getRemainingColumnNames().map(columnName => ({ label: columnName, value: columnName }))}
+            onChange={(e) => onChange(e.value)}
+            placeholder="Select the Target"
+        />
     );
 };
 
-export default ModelDropDown;
+export default ModelDropdown;

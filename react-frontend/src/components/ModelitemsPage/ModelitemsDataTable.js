@@ -10,11 +10,12 @@ const ModelitemsDataTable = ({items, onRowClick }) => {
     const pTemplate1 = (rowData, { rowIndex }) => <p >{rowData.Accuracy}</p>
     const pTemplate2 = (rowData, { rowIndex }) => <p >{rowData.AUC}</p>
     const pTemplate3 = (rowData, { rowIndex }) => <p >{rowData.Recall}</p>
-    const pTemplate4 = (rowData, { rowIndex }) => <p >{rowData.Prec}</p>   //Error
+    const pTemplate4 = (rowData, { rowIndex }) => <p >{rowData.Prec}</p>  
     const pTemplate5 = (rowData, { rowIndex }) => <p >{rowData.F1}</p>
     const pTemplate6 = (rowData, { rowIndex }) => <p >{rowData.Kappa}</p>
     const pTemplate7 = (rowData, { rowIndex }) => <p >{rowData.MCC}</p>
-    const pTemplate8 = (rowData, { rowIndex }) => <p >{rowData.TTSec}</p> // issue
+    const pTemplate8 = (rowData, { rowIndex }) => <p >{rowData.TTSec}</p> 
+    
 
     return (
         <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={10}>
