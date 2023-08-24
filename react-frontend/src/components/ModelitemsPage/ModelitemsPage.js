@@ -9,8 +9,6 @@ import ModelitemsEditDialogComponent from "./ModelitemsEditDialogComponent";
 import ModelitemsCreateDialogComponent from "./ModelitemsCreateDialogComponent";
 import ModelitemsFakerDialogComponent from "./ModelitemsFakerDialogComponent";
 import ModelitemsSeederDialogComponent from "./ModelitemsSeederDialogComponent";
-import { Button } from 'primereact/button';
-import { Dropdown } from 'primereact/dropdown';
 import ModelDropdown from "./ModelDropDown";
 
 
@@ -105,9 +103,6 @@ const ModelitemsPage = (props) => {
                         selectedColumnName={selectedColumnName}
                         onChange={setSelectedColumnName}
                     />
-                    <div className="flex justify-content-center">
-                        <Button label="Proceed To FE" />
-                    </div>
                     <SplitButton model={menuItems} dropdownIcon="pi pi-ellipsis-v" buttonClassName="hidden" menuButtonClassName="ml-2 p-button-text"></SplitButton>
                 </div>
             </div>
