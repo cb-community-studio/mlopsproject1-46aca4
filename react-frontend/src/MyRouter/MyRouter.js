@@ -35,6 +35,7 @@ import UsersPage from "../components/UsersPage/UsersPage";
 import ModelitemsPage from "../components/ModelitemsPage/ModelitemsPage";
 import MlopsViews from "../components/Mlops/MlopsView";
 import DataExplore from "../components/Mlops/DataExpl";
+import DataViewingPage from "../components/DataViewingPage/DataViewingPage";
 
 // ~cb-add-import~
 
@@ -187,6 +188,8 @@ const MyRouter = () => {
                     <Route path="/modelitems" component={ModelitemsPage} />
                     <Route path="/dataexplo" component={DataExplore} />
                     <Route path="/mlopsview" component={MlopsViews} />
+                    <Route path="/dataview" component={DataViewingPage} />
+                    
 
                     <Route path="*" component={NoMatch} />
                 </Switch>

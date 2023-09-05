@@ -1,5 +1,6 @@
 from getData import setup_diabetes_data,compare_best_models
 from pycaret.classification import pull
+from mongoServer import setup_mongo_collection
 
 
 def main():
