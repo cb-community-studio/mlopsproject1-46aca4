@@ -70,7 +70,7 @@ const UsersCreateDialogComponent = (props) => {
         <Dialog header="Edit Info" visible={props.show} closable={false} onHide={props.onHide} modal style={{ width: "40vw" }} className="min-w-max" footer={renderFooter()} resizable={false}>
             <div role="users-edit-dialog-component">
                 <div>
-                    <p className="m-0" >Email:</p>
+                    <p className="m-0" >Name:</p>
                     <InputText className="w-full mb-3" value={_entity?.name} onChange={(e) => setValByKey("name", e.target.value)}  />
                 </div>
                 <div>

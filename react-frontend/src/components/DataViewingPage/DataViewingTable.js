@@ -14,7 +14,6 @@ const DataViewingTable = ({ items, onRowClick }) => {
     const pTemplate7 = (rowData) => <p >{rowData.Age}</p>
     const pTemplate8 = (rowData) => <p >{rowData.Class_variable}</p>
 
-
     return (
         <div>
             <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={20}>

@@ -15,7 +15,7 @@ const DataExplore = () => {
           <DataViewingPage />
         </TabPanel>
         <TabPanel header="Feature Eng.">
-          <DataCard />
+          <DataViewingPage />
         </TabPanel>
         <TabPanel header="Model Comparison">
           <ModelitemsPage />
