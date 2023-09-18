@@ -6,8 +6,8 @@ import { Carousel } from 'primereact/carousel';
 
 const CarouselComponent = () => {
     const images = [
-        { source: 'https://tse1.mm.bing.net/th?id=OIP.nKp--ILXaUwIwF9QRhhXpgHaC0&pid=Api&P=0&h=180', alt: 'Image 1' },
-        { source: 'https://tse1.mm.bing.net/th?id=OIP.nKp--ILXaUwIwF9QRhhXpgHaC0&pid=Api&P=0&h=180', alt: 'Image 2' },
+        { source: 'https://i0.wp.com/neptune.ai/wp-content/uploads/2022/10/MLOps_cycle.jpg?ssl=1', alt: 'Image 1' },
+        { source: 'https://i0.wp.com/neptune.ai/wp-content/uploads/2022/10/ML-process.png?ssl=1', alt: 'Image 2' },
         { source: 'https://tse3.mm.bing.net/th?id=OIP.lX4vKiBvUYV5XwB6FqpsRQHaEK&pid=Api&P=0&h=180', alt: 'Image 3' },
     ];
   
@@ -20,9 +20,8 @@ const CarouselComponent = () => {
     };
  
     return (
-      <div className="col-12 m-0 align-items-center carousel-demo">
-        <Carousel value={images} className="custom-carousel" circular
-            autoplayInterval={3000} itemTemplate={itemTemplate} />
+      <div className="col-12 align-items-center">
+        <Carousel value={images}  numScroll={1} className="custom-carousel" circular autoplayInterval={1000} itemTemplate={itemTemplate}  />
       </div>
     );
 
@@ -44,7 +43,7 @@ const MlopsView = (props) => {
                     </div>
                     <div className="text-700 mb-6">MLOps streamlines ML model deployment, maintenance, involving data scientists, devops, and IT collaboration.</div>
                     <div className="grid">
-                        <div className="col-12 md:col-4 mb-4 px-5">
+                        <div className="col-12 md:col-7 mb-4 px-5">
                             <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
                                 <i className="pi pi-check-circle text-4xl text-blue-500"></i>
                             </span>
@@ -53,7 +52,7 @@ const MlopsView = (props) => {
                                 <Button label="Get started" type="button" className="p-button-raised" />
                             </a>
                         </div>
-                        <div className="col-12 md:col-4 mb-4 px-5">
+                        <div className="col-12 md:col-3 mb-4 px-5">
                             <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
                                 <i className="pi pi-desktop text-4xl text-blue-500"></i>
                             </span>
@@ -65,7 +64,6 @@ const MlopsView = (props) => {
                     </div>
                 </div>
                 </div>
-                <CarouselComponent />
             </div>
         </div>
     );

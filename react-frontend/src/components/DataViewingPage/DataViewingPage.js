@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import client from "../../services/restClient";
 import _ from "lodash";
-import DataViewingCreateComponents from "./DataViewingCreateComponents"; 
+import DataViewingCreateComponents from "./DataViewingCreateComponents";
 import DataViewingTable from "./DataViewingTable";
 import RemoveColumnComponent from "./RemoveColumnComponent";
 
@@ -61,7 +61,7 @@ const DataViewPage = (props) => {
                     <DataViewingTable items={data} onRowClick={onRowClick} />
                 </div>
             </div>
-            <DataViewingCreateComponents  show={showCreateDialog} onHide={() => setShowCreateDialog(false)} onCreateResult={onCreateResult} />
+            <DataViewingCreateComponents show={showCreateDialog} onHide={() => setShowCreateDialog(false)} onCreateResult={onCreateResult} />
         </div>
     );
 };

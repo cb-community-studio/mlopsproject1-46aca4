@@ -13,7 +13,7 @@ const ModelitemsDataTable = ({ items, onRowClick }) => {
         return Math.max(...numericValues);
     };
 
-    // Template function to conditionally apply the background highlight
+    // Function to conditionally apply the background highlight
     const createHighlightTemplate = (columnName) => (rowData, { rowIndex }) => {
         const highestValue = getHighestValueInColumn(columnName);
         const numericValue = parseFloat(rowData[columnName]);
@@ -65,6 +65,7 @@ const ModelitemsDataTable = ({ items, onRowClick }) => {
     return (
         <div>
             <LineGraph data={lineGraphData} />
+            <hr></hr>
             <DataTable value={items} onRowClick={onRowClick} scrollable rowHover paginator rows={20}>
                 <Column field="Model" header="Model" body={createHighlightTemplate("Model")} style={{ minWidth: "10rem" }} />
                 <Column field="Accuracy" header="Accuracy" body={createHighlightTemplate("Accuracy")} style={{ minWidth: "10rem" }} />

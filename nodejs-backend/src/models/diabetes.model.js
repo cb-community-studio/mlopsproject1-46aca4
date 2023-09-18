@@ -8,7 +8,7 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const schema = new Schema(
     {
-      Number_of_times_pregnant: { type: Number},
+      Number_of_times_pregnant: { type: Object},
       Plasma_glucose_concentration: { type: Object },
       Diastoli_blood_pressure: { type:Object },
       Triceps_skin_fold_thickness: { type: Object },

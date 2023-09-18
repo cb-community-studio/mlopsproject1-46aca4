@@ -14,7 +14,7 @@ def main():
     eval_results = pull()
 
     # Setup MongoDB collection
-    my_collection = setup_mongo_collection("MlopsProject_1", "trial")
+    my_collection = setup_mongo_collection("MlopsProject_1", "modelitems")
 
     #Insert evaluation results into MongoDB
     insert_evaluation_results(my_collection, eval_results)

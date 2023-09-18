@@ -4,6 +4,7 @@ import { TabView, TabPanel } from 'primereact/tabview';
 import ModelitemsPage from "../ModelitemsPage/ModelitemsPage";
 import DataCard from "../ModelitemsPage/DataCard";
 import DataViewingPage from "../DataViewingPage/DataViewingPage";
+import DataUploadDialog from "../DataUploadDialog/DataUploadDialog";
 
 const DataExplore = () => {
 
@@ -12,7 +13,8 @@ const DataExplore = () => {
     <div className="card w-12 ">
       <TabView>
         <TabPanel header="Data Visualisation">
-          <DataViewingPage />
+          <DataUploadDialog/>
+          {/* <DataViewingPage /> */}
         </TabPanel>
         <TabPanel header="Feature Eng.">
           <DataViewingPage />
